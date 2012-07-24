@@ -14,7 +14,6 @@
 // limitations under the License.
 //
 
-
 #import "UIImage+SiroccoUI.h"
 
 
@@ -23,10 +22,15 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 NI_FIX_CATEGORY_BUG(UIImage_SiroccoUI)
 
+@implementation UIView (NimbusCore)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * TODO retina displays
+ */
 + (UIImage *)imageWithPath:(NSString *)path {
-    // TODO retina displays
     NSString* path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
     return [UIImage imageWithContentsOfFile:path]
 }
+
+@end
