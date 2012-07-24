@@ -16,6 +16,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import <NimbusCore.h>
 
 
 @interface UIImage (SiroccoUI)
