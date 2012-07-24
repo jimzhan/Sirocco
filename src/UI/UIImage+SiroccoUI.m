@@ -17,6 +17,7 @@
 #import "UIImage+SiroccoUI.h"
 
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,11 +27,16 @@ NI_FIX_CATEGORY_BUG(UIImage_SiroccoUI)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * TODO retina displays
+ * TODOs
+ *  1) retina displays.
+ *  2) caching.
  */
 + (UIImage *)imageWithPath:(NSString *)path {
-    NSString* path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
-    return [UIImage imageWithContentsOfFile:path]
+    NSString* basename  = [path stringByDeletingPathExtension];
+    NSString* extension = path.pathExtension.length ? path.pathExtension : @"png";
+    NSString* abspath   = [[NSBundle mainBundle] pathForResource:basename ofType:extension];
+    
+    return [UIImage imageWithContentsOfFile:abspath];
 }
 
 @end
