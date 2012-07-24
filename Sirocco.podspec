@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary = 'Cocoa Addons'
   s.homepage= 'https://github.com/jimzhan/Sirocco'
   s.author  = { 'Jim Zhan'  => 'jim.zhan@me.com' }
-  s.source  = { :git => 'https://github.com/jimzhan/Sirocco.git', :tag => '0.9.0' }
+  s.source  = { :git => 'https://github.com/jimzhan/Sirocco.git', :commit => 'origin/master' }
   s.source_files = 'src', 'src/**/*.{h,m}'
   s.platform     = :ios
 end
