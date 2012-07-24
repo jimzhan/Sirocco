@@ -15,17 +15,28 @@
 //
 
 
-// Sirocco Foundation
-#import "SIBlock.h"
 #import "SICore.h"
-#import "SILocale.h"
-#import "SIObject.h"
-#import "SIRequest.h"
-#import "SIPath.h"
-#import "SIRect.h"
-#import "SIRegex.h"
-#import "SIResource.h"
 
-#import "NSArray+SICore.h"
-#import "NSObject+SICore.h"
-#import "NSString+SICore.h"
+
+/**
+ * Simple object with identity & data property (NSMutableDictionary) supports.
+ */
+@interface SIObject : NSObject<NSFastEnumeration>
+
+@property (nonatomic, readonly, copy) NSString* ID;
+
+
+#pragma mark - core initializer
+
+- (id)initWithID:(NSString *)ID, ...;
+
+
+#pragma mark - object's data
+
+- (id)objectForKey:(NSString *)key;
+
+- (id)popForKey:(NSString *)key;
+
+- (void)setObject:(id)object forKey:(NSString *)key;
+
+@end

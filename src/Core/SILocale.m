@@ -15,17 +15,17 @@
 //
 
 
-// Sirocco Foundation
-#import "SIBlock.h"
-#import "SICore.h"
 #import "SILocale.h"
-#import "SIObject.h"
-#import "SIRequest.h"
-#import "SIPath.h"
-#import "SIRect.h"
-#import "SIRegex.h"
 #import "SIResource.h"
 
-#import "NSArray+SICore.h"
-#import "NSObject+SICore.h"
-#import "NSString+SICore.h"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+NSString* SILocalizedString(NSString* key) {
+    static NSBundle* bundle = nil;
+    
+    if (nil == bundle) {
+        bundle = [NSBundle bundleWithPath:SIPathForResource(@"Sirocco.bundle")];
+    }
+    
+    return [bundle localizedStringForKey:key value:key table:nil];
+}

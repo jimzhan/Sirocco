@@ -15,17 +15,10 @@
 //
 
 
-// Sirocco Foundation
-#import "SIBlock.h"
-#import "SICore.h"
-#import "SILocale.h"
-#import "SIObject.h"
-#import "SIRequest.h"
-#import "SIPath.h"
-#import "SIRect.h"
-#import "SIRegex.h"
-#import "SIResource.h"
+#import <Foundation/Foundation.h>
 
-#import "NSArray+SICore.h"
-#import "NSObject+SICore.h"
-#import "NSString+SICore.h"
+
+/**
+ * Shortcut to NSLocalizedString to access Sirocco specific localized strings.
+ */
+NSString* SILocalizedString(NSString* key);

@@ -15,17 +15,18 @@
 //
 
 
-// Sirocco Foundation
-#import "SIBlock.h"
-#import "SICore.h"
-#import "SILocale.h"
-#import "SIObject.h"
-#import "SIRequest.h"
-#import "SIPath.h"
-#import "SIRect.h"
-#import "SIRegex.h"
-#import "SIResource.h"
+#import <Foundation/Foundation.h>
 
-#import "NSArray+SICore.h"
-#import "NSObject+SICore.h"
-#import "NSString+SICore.h"
+
+#if NS_BLOCKS_AVAILABLE
+
+// Most Generic block with Argument & returned Value support.
+typedef id (^SIBlock)(id object);
+
+// Argument block without returned value, for processing data mainly.
+typedef void (^SIABlock)(id object);
+
+// Block with returned value that does not accept argument, for generating data mainly.
+typedef id  (^SIVBlock)(void);
+
+#endif
