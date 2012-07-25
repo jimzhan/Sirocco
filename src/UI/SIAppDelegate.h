@@ -14,12 +14,20 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SiroccoCore.h"
+
+
+
+extern NSString* const kSIStyleSheet;
+
+
+/**
+ * General application delegate with :class:`NIStylesheetCache` supports.
+ */
+@interface SIAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) UIWindow* window;
+@property (nonatomic, readonly, retain) NIStylesheetCache* style;
+
+@end

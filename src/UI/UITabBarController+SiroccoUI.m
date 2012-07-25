@@ -14,28 +14,34 @@
 // limitations under the License.
 //
 
-#import "UIImage+SiroccoUI.h"
+
+#import "UITabBarController+SiroccoUI.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-NI_FIX_CATEGORY_BUG(UIImage_SiroccoUI)
+NI_FIX_CATEGORY_BUG(UITabBarController_SiroccoUI)
 
-@implementation UIImage (SiroccoUI)
+
+@implementation UITabBarController (SiroccoUI)
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * TODOs
- *  1) retina displays.
- *  2) caching.
+ * Native viewControllers property setter addon, inject the regular UIViewController into 
+ * UINavigationController before adding it into UITabBar.
  */
-+ (UIImage *)imageWithPath:(NSString *)path {
-    NSString* basename  = [path stringByDeletingPathExtension];
-    NSString* extension = path.pathExtension.length ? path.pathExtension : @"png";
-    NSString* abspath   = [[NSBundle mainBundle] pathForResource:basename ofType:extension];
-    
-    return [UIImage imageWithContentsOfFile:abspath];
+- (void) setViewControllers:(NSArray *)viewControllers {
+    NSMutableArray * views = [NSMutableArray arrayWithCapacity:viewControllers.count];
+    for (int index; index < viewControllers.count; ++index) {
+        id controller = [viewControllers objectAtIndex:index];
+        if (! [controller isKindOfClass:[UINavigationController class]]) {
+            controller = [[UINavigationController alloc] initWithRootViewController:controller];
+        }
+        [views addObject:controller];
+    }
+    [self setViewControllers:views animated:NO];
 }
 
 @end

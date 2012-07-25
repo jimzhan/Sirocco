@@ -14,28 +14,37 @@
 // limitations under the License.
 //
 
-#import "UIImage+SiroccoUI.h"
+
+#import "SIStyle.h"
+
+
+NSString* const kSIStylesheet = @"sirocco-default.css";
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+static NSString* const kStylesheetsPath = @"Sirocco.bundle/stylesheets";
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////
-NI_FIX_CATEGORY_BUG(UIImage_SiroccoUI)
-
-@implementation UIImage (SiroccoUI)
+#pragma mark - Public methods
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * TODOs
- *  1) retina displays.
- *  2) caching.
- */
-+ (UIImage *)imageWithPath:(NSString *)path {
-    NSString* basename  = [path stringByDeletingPathExtension];
-    NSString* extension = path.pathExtension.length ? path.pathExtension : @"png";
-    NSString* abspath   = [[NSBundle mainBundle] pathForResource:basename ofType:extension];
-    
-    return [UIImage imageWithContentsOfFile:abspath];
+NIStylesheetCache* SIStylesheetCache(void) {
+    static NIStylesheetCache* kStylesheetCache = nil;
+    if (nil == kStylesheetCache) {
+        NSString* path = SIPathForResource(kStylesheetsPath);
+        kStylesheetCache = [[NIStylesheetCache alloc] initWithPathPrefix:path];
+    }
+    return kStylesheetCache;
 }
 
-@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+NIStylesheet* SIStylesheet(NSString* filename) {
+    NIStylesheetCache* cache = SIStylesheetCache();
+    return [cache stylesheetWithPath:filename ? filename : kSIStylesheet];
+}
+

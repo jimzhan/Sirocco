@@ -14,12 +14,19 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SITableViewController.h"
+#import "SISection.h"
+
+
+extern CGFloat kSITableViewSectionHeight;
+
+
+@interface SIFoldableTableController : SITableViewController <SISectionViewDelegate>
+
+@property (nonatomic, readwrite, assign) NSInteger openedSection;
+@property (nonatomic, readonly,  retain) NSMutableArray *sections;
+
+- (void)resetSections;
+
+@end

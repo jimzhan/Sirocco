@@ -14,12 +14,22 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SIAbstractTableController.h"
+
+
+extern CGFloat kSIPageControlHeight;
+
+
+@interface SIPageTableController : SIAbstractTableController<
+NIPagingScrollViewDelegate,
+NIPagingScrollViewDataSource>
+
+@property (nonatomic, readonly, retain) UIPageControl* pageControl;
+@property (nonatomic, readonly, retain) NIPagingScrollView* pageView;
+
+@property (nonatomic, assign) NSInteger numberOfPages;
+
+- (UITableView *)tableViewForPage:(NSInteger)page;
+
+@end

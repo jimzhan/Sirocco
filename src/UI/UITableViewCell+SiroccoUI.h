@@ -14,12 +14,18 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import <UIKit/UIKit.h>
+
+
+@interface UITableViewCell (SiroccoUI)
+
+// detail view to expand/collapse.
+@property (nonatomic, readwrite, retain) UIView* detailView;
+@property (nonatomic, readonly, getter=isExpanded) BOOL expanded;
+@property (nonatomic, readonly, getter=isExpandable) BOOL expandable;
+
+- (void)expand:(BOOL)flag;
+- (void)toggleExpansion;
+
+@end

@@ -14,12 +14,21 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SiroccoCore.h"
+
+
+/**
+ * Full superview-based activity status view, occur full superview's frame.
+ */
+@interface SIStatusView : UIView
+
+@property (nonatomic, readwrite, retain) UIView* titleView;
+@property (nonatomic, readwrite, copy) NSString* subtitle;
+@property (nonatomic, readonly, getter=isShowing) BOOL showing;
+
+- (void)showLoading:(BOOL)show;
+- (void)showEmpty:(BOOL)show;
+- (void)showError:(BOOL)show;
+
+@end

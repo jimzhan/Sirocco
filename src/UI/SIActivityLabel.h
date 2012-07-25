@@ -14,12 +14,20 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SiroccoCore.h"
+
+
+/**
+ * UIActivityIndicatorView + NIAttributeLabel.
+ */
+@interface SIActivityLabel : UIView
+
+@property (nonatomic, readwrite, copy) NSString* text;
+@property (nonatomic, readonly, retain) NIAttributedLabel* label;
+@property (nonatomic, readonly, retain) UIActivityIndicatorView* activityIndicator;
+
+- (id)initWithStyle:(UIActivityIndicatorViewStyle)style;
+- (id)initWithFrame:(CGRect)frame style:(UIActivityIndicatorViewStyle)style;
+
+@end

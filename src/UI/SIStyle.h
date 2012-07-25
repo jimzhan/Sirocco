@@ -14,12 +14,27 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SiroccoCore.h"
+
+
+/**
+ * Currently available options:
+ *
+ *  sirocco-default.css | ...
+ *
+ */
+extern NSString* const kSIStylesheet;
+
+
+/**
+ * Nimbus CSS based stylesheets cache.
+ */
+NIStylesheetCache* SIStylesheetCache(void);
+
+
+/**
+ * Sirocco's styles.
+ */
+NIStylesheet* SIStylesheet(NSString* filename);
+

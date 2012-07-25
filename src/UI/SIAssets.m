@@ -14,12 +14,13 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+#import "SIAssets.h"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+NSString* const kSIUpArrow      = @"Sirocco.bundle/images/UpArrow";
+NSString* const kSIDownArrow    = @"Sirocco.bundle/images/DownArrow";
+
+NSString* const kSICloseAccessory = @"Sirocco.bundle/images/CloseAccessory";
+NSString* const kSIOpenAccessory  = @"Sirocco.bundle/images/OpenAccessory";
