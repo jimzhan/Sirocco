@@ -16,3 +16,7 @@
 
 #import "SiroccoCore.h"
 
+#import "NSArray+SiroccoCore.h"
+#import "NSObject+SiroccoCore.h"
+#import "NSString+SiroccoCore.h"
+

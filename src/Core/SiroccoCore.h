@@ -25,7 +25,3 @@
 #import "SIRect.h"
 #import "SIRegex.h"
 #import "SIResource.h"
-
-#import "NSArray+SICore.h"
-#import "NSObject+SICore.h"
-#import "NSString+SICore.h"
