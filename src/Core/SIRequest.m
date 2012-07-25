@@ -16,7 +16,7 @@
 
 
 #import "SIRequest.h"
-#import "NSArray+SICore.h"
+#import "NSArray+SiroccoCore.h"
 
 
 NSInteger kMaxConcurrentOperations = 2;

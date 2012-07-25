@@ -16,7 +16,8 @@
 
 
 #import "SIObject.h"
-#import "NSObject+SICore.h"
+
+#import "NSObject+SiroccoCore.h"
 
 
 @interface SIObject ()

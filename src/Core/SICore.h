@@ -18,19 +18,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-
-#import "NimbusCSS.h"
-#import "NimbusCore+Additions.h"
-#import "NimbusAttributedLabel.h"
-#import "NimbusInterapp.h"
-#import "NimbusLauncher.h"
-#import "NimbusModels.h"
-#import "NimbusNetworkControllers.h"
-#import "NimbusOperations.h"
-#import "NimbusOverview.h"
-#import "NimbusPagingScrollView.h"
-#import "NimbusPhotos.h"
-#import "NimbusWebController.h"
+#import <NimbusCore+Additions.h>
 
 
 #define WeakRef     __unsafe_unretained

@@ -16,7 +16,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import <NimbusCore.h>
+#import <NimbusCore+Additions.h>
 
 
 @interface NSString (SiroccoCore)
