@@ -11,15 +11,14 @@ Pod::Spec.new do |s|
   s.dependency 'ZUUIRevealController'
 
   s.platform = :ios
-#  s.source_files = 'src/*.{h,m}', 'src/{Core,UI}/*.{h,m}'
 
-  s.subspec 'Core' do |core|
-    core.source_files = 'src/core/src/*.{h,m}'
+  s.subspec 'core' do |core|
+    core.source_files = 'apps/core/src/*.{h,m}'
   end
 
-  s.subspec 'UI' do |ui|
-    ui.source_files = 'src/ui/src/*.{h,m}'
-    ui.resource = 'src/ui/assets/SiroccoUI.bundle'
+  s.subspec 'ui' do |ui|
+    ui.source_files = 'apps/ui/src/*.{h,m}'
+    ui.resource = 'apps/ui/assets/SiroccoUI.bundle'
   end
 
 end
