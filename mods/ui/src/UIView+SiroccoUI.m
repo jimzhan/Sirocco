@@ -196,7 +196,7 @@ NI_FIX_CATEGORY_BUG(UIView_SiroccoUI)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSInteger)tagForName:(NSString *)name {
-    NSString* string = [NSString stringWithFormat:@"%@::%@", self.className, name];
+    NSString* string = [NSString stringWithFormat:@"%@::%@", NSStringFromClass([self class]), name];
     NSString* hash = [string md5Hash];
     const char* cstring = [hash cStringUsingEncoding:NSUTF8StringEncoding];
     
