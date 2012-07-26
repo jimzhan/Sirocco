@@ -40,12 +40,4 @@
 + (UIBarButtonItem *)flexibleSpace;
 
 
-/**
- * Create a button based bar button item.
- */
-+ (UIBarButtonItem *)itemWithImage: (UIImage *)image 
-                            target: (id)target 
-                            action: (SEL)action;
-
-
 @end

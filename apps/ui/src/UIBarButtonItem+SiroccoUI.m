@@ -54,18 +54,4 @@ NI_FIX_CATEGORY_BUG(UIBarButtonItem_SiroccoUI)
                                                          action:nil];
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark - Public methods
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-+ (UIBarButtonItem *)itemWithImage:(UIImage *)image target:(id)target action:(SEL)action {
-    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setSize:image.size];
-    [button setImage:image forState:UIControlStateNormal];
-    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    return [[self alloc] initWithCustomView:button];
-}
-
 @end
