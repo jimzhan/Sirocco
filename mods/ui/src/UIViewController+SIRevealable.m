@@ -40,10 +40,7 @@ NI_FIX_CATEGORY_BUG(UIViewController_SIRevealable)
         [self.navigationController.navigationBar addGestureRecognizer:panGestureRecognizer];
         [self.navigationController.view addGestureRecognizer:panGestureRecognizer];
         
-//        UIImage* menu = [UIImage imageWithPath:
-        UIImage* menu = [UIImage imageWithContentsOfFile:
-                         NIPathForBundleResource(nil, @"SiroccoUI.bundle/menu.png")];
-        
+        UIImage* menu = [UIImage imageWithPath:@"SiroccoUI.bundle/menu.png"];
         UIBarButtonItem* list = [[UIBarButtonItem alloc] initWithImage:menu 
                                                                  style:UIBarButtonItemStylePlain 
                                                                 target:self.navigationController.parentViewController 
