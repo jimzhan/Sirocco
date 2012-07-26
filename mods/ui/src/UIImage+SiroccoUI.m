@@ -33,8 +33,7 @@ NI_FIX_CATEGORY_BUG(UIImage_SiroccoUI)
 + (UIImage *)imageWithPath:(NSString *)path {
     NSString* basename  = [path stringByDeletingPathExtension];
     NSString* extension = path.pathExtension.length ? path.pathExtension : @"png";
-    NSString* abspath   = [[NSBundle mainBundle] pathForResource:basename ofType:extension];
-    
+    NSString* abspath = NIPathForBundleResource(nil, [basename stringByAppendingPathExtension:extension]);
     return [UIImage imageWithContentsOfFile:abspath];
 }
 
