@@ -14,12 +14,11 @@ Pod::Spec.new do |s|
 #  s.source_files = 'src/*.{h,m}', 'src/{Core,UI}/*.{h,m}'
 
   s.subspec 'Core' do |core|
-    core.source_files = 'src/core/src'
+    core.source_files = 'src/core/src/*.{h,m}'
   end
 
-  s.subspec 'UIKit' do |ui|
-    ui.source_files = 'src/ui/src'
-#    ui.dependency 'src/core/src'
+  s.subspec 'UI' do |ui|
+    ui.source_files = 'src/ui/src/*.{h,m}'
     ui.resource = 'src/ui/assets/SiroccoUI.bundle'
   end
 
