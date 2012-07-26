@@ -14,12 +14,13 @@ Pod::Spec.new do |s|
   s.platform = :ios
 
   s.subspec 'core' do |core|
-    core.source_files = 'apps/core/src/*.{h,m}'
+    core.source_files = 'mods/core/src/*.{h,m}'
+#    core.resource = 'mods/core/assets/SiroccoCore.bundle'
   end
 
   s.subspec 'ui' do |ui|
-    ui.source_files = 'apps/ui/src/*.{h,m}'
-    ui.resource  = 'apps/ui/assets/SiroccoUI.bundle'
+    ui.source_files = 'mods/ui/src/*.{h,m}'
+    ui.resource  = 'mods/ui/assets/SiroccoUI.bundle'
     ui.framework = 'QuartzCore'
     ui.framework = 'CoreGraphics'
   end
