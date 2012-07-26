@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name     = 'Sirocco'
+  s.name     = 'sirocco'
   s.version  = '0.9.0'
   s.license  = 'Apache License, Version 2.0'
   s.summary  = 'Cocoa Addons'
@@ -17,9 +17,10 @@ Pod::Spec.new do |s|
     core.source_files = 'src/core/src'
   end
 
-  s.subspec 'UI' DO |ui|
+  s.subspec 'UIKit' do |ui|
     ui.source_files = 'src/ui/src'
-    ui.dependency 'Sirocco/Core'
+#    ui.dependency 'src/core/src'
     ui.resource = 'src/ui/assets/SiroccoUI.bundle'
   end
+
 end
