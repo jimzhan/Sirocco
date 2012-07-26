@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 
-
+#import <NimbusModels.h>
 #import "SiroccoCore.h"
 #import "EGORefreshTableHeaderView.h"
 
