@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'Nimbus'
   s.dependency 'ZUUIRevealController'
+  s.dependency 'EGOTableViewPullRefresh'
 
   s.platform = :ios
 
