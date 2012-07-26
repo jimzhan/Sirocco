@@ -16,7 +16,6 @@
 
 #import "UIViewController+SIRevealable.h"
 
-#import "SiroccoCore.h"
 #import "UIImage+SiroccoUI.h"
 
 

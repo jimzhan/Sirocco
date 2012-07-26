@@ -19,7 +19,9 @@ Pod::Spec.new do |s|
 
   s.subspec 'ui' do |ui|
     ui.source_files = 'apps/ui/src/*.{h,m}'
-    ui.resource = 'apps/ui/assets/SiroccoUI.bundle'
+    ui.resource  = 'apps/ui/assets/SiroccoUI.bundle'
+    ui.framework = 'QuartzCore'
+    ui.framework = 'CoreGraphics'
   end
 
 end

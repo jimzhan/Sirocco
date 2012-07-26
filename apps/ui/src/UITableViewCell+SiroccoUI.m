@@ -14,7 +14,6 @@
 // limitations under the License.
 //
 
-
 #import "UITableViewCell+SiroccoUI.h"
 
 #import "UIView+SiroccoUI.h"

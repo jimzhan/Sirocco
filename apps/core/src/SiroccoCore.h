@@ -14,7 +14,9 @@
 // limitations under the License.
 //
 
-#import "NimbusCore.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <NimbusCore.h>
 
 // Sirocco Foundation
 #import "SIBlock.h"

@@ -14,8 +14,7 @@
 // limitations under the License.
 //
 
-
-#import <UIKit/UIKit.h>
+#import "SiroccoCore.h"
 
 
 @interface UIBarButtonItem (SiroccoUI)
@@ -44,7 +43,9 @@
 /**
  * Create a button based bar button item.
  */
-+ (UIBarButtonItem *)itemWithImage:(UIImage *)image target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)itemWithImage: (UIImage *)image 
+                            target: (id)target 
+                            action: (SEL)action;
 
 
 @end

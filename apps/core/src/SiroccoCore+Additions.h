@@ -14,6 +14,8 @@
 // limitations under the License.
 //
 
+#import <NimbusCore+Additions.h>
+
 #import "SiroccoCore.h"
 
 #import "NSArray+SiroccoCore.h"

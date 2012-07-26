@@ -14,7 +14,6 @@
 // limitations under the License.
 //
 
-
 #import "UIView+GradientLayer.h"
 
 #import <QuartzCore/QuartzCore.h>

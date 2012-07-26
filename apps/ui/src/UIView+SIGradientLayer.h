@@ -14,8 +14,7 @@
 // limitations under the License.
 //
 
-
-#import <UIKit/UIKit.h>
+#import "SiroccoCore.h"
 
 
 @interface UIView (SIGradientLayer)
