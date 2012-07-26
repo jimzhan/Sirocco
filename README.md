@@ -13,8 +13,8 @@ Installation
 =========================
 To most easies way to install Sirocco is to use [CocoaPods](//github.com/CocoaPods/CocoaPods) 
 
-1. Setup [CocoaPods](//github.com/CocoaPods/CocoaPods) by following it [README](//github.com/CocoaPods/CocoaPods/blob/master/README.md).
-2. Specify Sirocco in your Podfile: 
+1. Setup [CocoaPods](//github.com/CocoaPods/CocoaPods) by following its [README](//github.com/CocoaPods/CocoaPods/blob/master/README.md).
+2. Add Sirocco to your Podfile:
 ```
 Pod 'Sirocco', :podspec => 'https://raw.github.com/jimzhan/Sirocco/master/Sirocco.podspec'  
 ```
