@@ -14,12 +14,20 @@
 // limitations under the License.
 //
 
-#import "SiroccoUI.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-#import "UIView+SiroccoUI.h"
-#import "UIView+GradientLayer.h"
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-#import "UITabBarController+SiroccoUI.h"
-#import "UIImage+SiroccoUI.h"
-#import "UIBarButtonItem+SiroccoUI.h"
+
+@interface UIViewController (SIRevealable)
+
+/**
+ * Setup the controller for revealing with the following options:
+ *  1) UIPanGestureRecognizer for both navigationBar & view.
+ *  2) Reveal bar button item with common icon (left).
+ *
+ * NOTE if its parent view controller of its navigation controller has not
+ * yet been setup for revealing (in ZUUIRevealController), do nothing.
+ */
+- (void)setupForReveal;
+
+@end

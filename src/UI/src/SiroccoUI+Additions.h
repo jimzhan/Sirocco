@@ -14,14 +14,15 @@
 // limitations under the License.
 //
 
+#import "SiroccoUI.h"
 
-// Sirocco Foundation
-#import "SIBlock.h"
-#import "SICore.h"
-#import "SILocale.h"
-#import "SIObject.h"
-#import "SIRequest.h"
-#import "SIPath.h"
-#import "SIRect.h"
-#import "SIRegex.h"
-#import "SIResource.h"
+
+#import "UIView+SiroccoUI.h"
+#import "UIView+SIGradientLayer.h"
+#import "UIImage+SiroccoUI.h"
+
+#import "UITableViewCell+SiroccoUI.h"
+#import "UITableView+SiroccoUI.h"
+
+#import "UITabBarController+SiroccoUI.h"
+#import "UIBarButtonItem+SiroccoUI.h"

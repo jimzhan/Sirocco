@@ -14,12 +14,15 @@
 // limitations under the License.
 //
 
+#import "NimbusCore.h"
 
-#import <UIKit/UIKit.h>
-
-
-@interface UIView (GradientLayer)
-
-- (void)setGradientColors:(NSArray *)colors;
-
-@end
+// Sirocco Foundation
+#import "SIBlock.h"
+#import "SICore.h"
+#import "SILocale.h"
+#import "SIObject.h"
+#import "SIRequest.h"
+#import "SIPath.h"
+#import "SIRect.h"
+#import "SIRegex.h"
+#import "SIResource.h"

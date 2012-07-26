@@ -15,19 +15,11 @@
 //
 
 
-#import "SiroccoCore.h"
+#import <UIKit/UIKit.h>
 
 
-/**
- * UIActivityIndicatorView + NIAttributeLabel.
- */
-@interface SIActivityLabel : UIView
+@interface UIView (SIGradientLayer)
 
-@property (nonatomic, readwrite, copy) NSString* text;
-@property (nonatomic, readonly, retain) NIAttributedLabel* label;
-@property (nonatomic, readonly, retain) UIActivityIndicatorView* activityIndicator;
-
-- (id)initWithStyle:(UIActivityIndicatorViewStyle)style;
-- (id)initWithFrame:(CGRect)frame style:(UIActivityIndicatorViewStyle)style;
+- (void)setGradientColors:(NSArray *)colors;
 
 @end
