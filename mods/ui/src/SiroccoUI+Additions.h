@@ -16,13 +16,10 @@
 
 #import "SiroccoUI.h"
 
-
+#import "UIImage+SiroccoUI.h"
 #import "UIView+SiroccoUI.h"
 #import "UIView+SIGradientLayer.h"
-#import "UIImage+SiroccoUI.h"
+#import "UIViewController+SIRevealable.h"
 
-#import "UITableViewCell+SiroccoUI.h"
-#import "UITableView+SiroccoUI.h"
-
-#import "UITabBarController+SiroccoUI.h"
 #import "UIBarButtonItem+SiroccoUI.h"
+#import "UITabBarController+SiroccoUI.h"
