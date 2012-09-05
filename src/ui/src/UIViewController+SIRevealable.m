@@ -17,6 +17,7 @@
 #import "UIViewController+SIRevealable.h"
 
 #import "UIImage+SiroccoUI.h"
+#import "NSObject+SiroccoCore.h"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -46,6 +47,41 @@ NI_FIX_CATEGORY_BUG(UIViewController_SIRevealable)
                                                                 target:self.navigationController.parentViewController 
                                                                 action:@selector(revealToggle:)];
         self.navigationItem.leftBarButtonItem = list;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Properties
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)isRevealable {
+    return YES;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setRevealable:(BOOL)revealable 
+{
+
+    //- (void)setAssociatedObject:(id)value forKey:(const void *)key;
+
+    if (revealable) {
+         if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)]
+            && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)]) {
+            
+            UIPanGestureRecognizer* panGestureRecognizer = [[UIPanGestureRecognizer alloc] 
+                                                            initWithTarget:self.navigationController.parentViewController 
+                                                            action:@selector(revealGesture:)];
+            
+            [self.navigationController.view addGestureRecognizer:panGestureRecognizer];
+            
+            UIImage* menu = [UIImage imageWithPath:@"SiroccoUI.bundle/menu.png"];
+            UIBarButtonItem* list = [[UIBarButtonItem alloc] initWithImage:menu 
+                                                                     style:UIBarButtonItemStylePlain 
+                                                                    target:self.navigationController.parentViewController 
+                                                                    action:@selector(revealToggle:)];
+            self.navigationItem.leftBarButtonItem = list;
+        }
     }
 }
 

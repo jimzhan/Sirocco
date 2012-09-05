@@ -98,14 +98,15 @@ NI_FIX_CATEGORY_BUG(NSObject_SiroccoCore)
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) getAssociatedObjectForKey:(const void *)key {
+- (id)getAssociatedObjectForKey:(const void *)key 
+{
     return objc_getAssociatedObject(self, key);
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) setAssociatedObject:(id)value forKey:(const void *)key {
-
+- (void)setAssociatedObject:(id)value forKey:(const void *)key 
+{
     // reject the same value update to avoid memory leak.
     if (value == [self getAssociatedObjectForKey:key]) {
         return;

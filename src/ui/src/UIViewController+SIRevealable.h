@@ -29,4 +29,6 @@
  */
 - (void)setupForReveal;
 
+@property (readwrite) BOOL revealable;
+
 @end

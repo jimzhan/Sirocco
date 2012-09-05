@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/jimzhan/Sirocco'
   s.author   = { 'Jim Zhan'  => 'jim.zhan@me.com' }
   s.source   = { :git => 'https://github.com/jimzhan/Sirocco.git' }
+  s.requires_arc = true
 
   s.dependency 'Nimbus'
   s.dependency 'ZUUIRevealController'
@@ -14,13 +15,13 @@ Pod::Spec.new do |s|
   s.platform = :ios
 
   s.subspec 'core' do |core|
-    core.source_files = 'mods/core/src/*.{h,m}'
-#    core.resource = 'mods/core/assets/SiroccoCore.bundle'
+    core.source_files = 'src/core/src/*.{h,m}'
+#    core.resource = 'src/core/SiroccoCore.bundle'
   end
 
   s.subspec 'ui' do |ui|
-    ui.source_files = 'mods/ui/src/*.{h,m}'
-    ui.resource  = 'mods/ui/assets/SiroccoUI.bundle'
+    ui.source_files = 'src/ui/src/*.{h,m}'
+    ui.resource  = 'src/ui/SiroccoUI.bundle'
     ui.framework = 'QuartzCore'
     ui.framework = 'CoreGraphics'
   end
