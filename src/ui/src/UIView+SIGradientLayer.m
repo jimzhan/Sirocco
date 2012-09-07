@@ -34,9 +34,14 @@ NI_FIX_CATEGORY_BUG(UIView_SIGradientLayer)
 #pragma mark - Class public UIView
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+
 + (Class)layerClass {
     return [CAGradientLayer class];
 }
+
+#pragma clang diagnostic pop
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

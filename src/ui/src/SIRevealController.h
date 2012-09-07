@@ -16,8 +16,12 @@
 
 #import <UIKit/UIKit.h>
 #import <ZUUIRevealController.h>
-#import "NimbusCore.h"
-#import "NimbusModels.h"
+
+
+#ifndef SIROCCO_UI_REVEAL
+    #define SIROCCO_UI_REVEAL @"SiroccoUI.bundle/reveal.png"
+#endif
+
 
 
 @interface SIRevealController : ZUUIRevealController <ZUUIRevealControllerDelegate>

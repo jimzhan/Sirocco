@@ -19,7 +19,6 @@
 #import "UIImage+SiroccoUI.h"
 #import "UIView+SiroccoUI.h"
 #import "UIView+SIGradientLayer.h"
-#import "UIViewController+SIRevealable.h"
 
 #import "UIBarButtonItem+SiroccoUI.h"
 #import "UITabBarController+SiroccoUI.h"
