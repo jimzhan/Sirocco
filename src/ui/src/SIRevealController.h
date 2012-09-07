@@ -22,17 +22,17 @@
 
 @interface SIRevealController : ZUUIRevealController <ZUUIRevealControllerDelegate>
 
-@property (nonatomic, readwrite, retain) UINavigationController* mainViewController;
-@property (nonatomic, readwrite, retain) UINavigationController* menuViewController;
+@property (nonatomic, readwrite, retain) UIViewController* mainController;
+@property (nonatomic, readwrite, retain) UIViewController* menuController;
 
 /**
  * Create revealable view controller with main/front view & menu.
  *
- *      @param controller: main view controller for regular interactions.
+ *      @param mainController: main view controller for regular interactions.
  *      @param menu: path to plist file which contains the detailed menu list,
  *                  NOTE: string => table section, dict => detailed menu item (id + name + enabled).
  *
  */
-- (id)initWithMainViewController:(UIViewController *)controller menu:(NSString *)menu;
+- (id)initWithMainController:(UIViewController *)mainController menu:(NSString *)menu;
 
 @end

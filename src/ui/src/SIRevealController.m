@@ -54,15 +54,15 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithMainViewController:(UIViewController *)controller menu:(NSString *)menu
+- (id)initWithMainController:(UIViewController *)mainController menu:(NSString *)menu
 {
 
-    self.mainViewController = controller;
+    self.mainController = mainController;
     SIRevealMenuController* m = [[SIRevealMenuController alloc] initWithMenu:menu];
-    self.menuViewController = [[UINavigationController alloc] initWithRootViewController:m];
+    self.menuController = [[UINavigationController alloc] initWithRootViewController:m];
     
-    if ([self initWithFrontViewController:self.mainViewController
-                       rearViewController:self.menuViewController]) {
+    if ([self initWithFrontViewController:self.mainController
+                       rearViewController:self.menuController]) {
         
     }
     
@@ -71,11 +71,11 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)setMainViewController:(UIViewController *)mainViewController {
-    if ([mainViewController isKindOfClass:[UINavigationController class]]){
-        self.mainViewController = (UINavigationController *) mainViewController;
+- (void)setMainController:(UIViewController *)mainController {
+    if ([mainController isKindOfClass:[UINavigationController class]]){
+        self.mainController = (UINavigationController *) mainController;
     } else {
-        self.mainViewController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+        self.mainController = [[UINavigationController alloc] initWithRootViewController:mainController];
     }
 }
 
