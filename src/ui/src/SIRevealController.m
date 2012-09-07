@@ -84,7 +84,7 @@
 - (void)setupForReveal {
 //    if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)]
 //        && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)]) {
-        
+        /*
         UIPanGestureRecognizer* panGestureRecognizer = [[UIPanGestureRecognizer alloc]
                                                         initWithTarget:self.navigationController.parentViewController
                                                         action:@selector(revealGesture:)];
@@ -99,6 +99,7 @@
                                                                 action:@selector(revealToggle:)];
         self.navigationItem.leftBarButtonItem = list;
 //    }
+         */
 }
 
 @end
